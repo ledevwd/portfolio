@@ -1,0 +1,253 @@
+/* Global styles */
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     transition: all 0.3s linear;
+}
+
+:root {
+     /* Colors */
+     --bg-primary: #8a2be2;
+     --bg-second: #a0a0a0;
+     --bg-dark: #0f0f0f;
+     --bg-light: #ffffff;
+     
+     /* Fonts */
+     --font-normal: 1.3rem;
+     --font-big: 6rem;
+
+     /* Selection */
+     --bg-selection: #e6e6e6;
+}
+
+html {
+     font-family: Montserrat-Regular;
+     font-size: 16px;
+     overflow-x: hidden;
+}
+
+::selection {
+     background-color: var(--bg-selection);
+}
+
+@font-face {
+     font-family: Montserrat-Regular;
+     src: url(../fonts/Montserrat/Montserrat-Regular.ttf);
+}
+
+@font-face {
+     font-family: Montserrat-Thin;
+     src: url(../fonts/Montserrat/Montserrat-Thin.ttf);
+}
+
+.section-padding {
+     padding: 0 180px;
+}
+
+.font-lighter {
+     font-family: Montserrat-Thin;
+}
+
+.author {
+     font-size: var(--font-normal);
+     text-transform: capitalize;
+     font-weight: bold;
+}
+
+.flex {display: flex;}
+.space-between {justify-content: space-between;}
+.align-vertical {align-items: center;}
+.align-horizontal {justify-content: center;}
+.align-center {text-align: center;}
+
+.breadcrumb {
+     background-color: #f9f8f8;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.breadcrumb ol {
+     list-style: none;
+     display: flex;
+     position: relative;
+     top: -20px;
+     padding: 30px 30px 10px 30px;
+     background-color: #f9f8f8;
+     border-radius: 5px;
+}
+
+.breadcrumb .breadcrumb-item::after {
+     content: "/";
+     margin: 0 10px;
+}
+
+.breadcrumb .breadcrumb-item:last-child::after {
+     content: "";
+     margin: 0;
+}
+
+/* Elements */
+h1 {
+     font-size: var(--font-big);
+     text-transform: capitalize;
+}
+
+p, .author {
+     font-size: var(--font-normal);
+     line-height: 1.6;
+     margin-top: 15px;
+     margin-bottom: 15px;
+}
+
+a {
+     color: var(--bg-dark);
+     text-decoration: none;
+}
+
+a:hover {
+     color: #0084ff;
+}
+
+a:hover, a:focus {
+     text-decoration: underline;
+}
+
+.line {
+     width: 25%;
+     height: 5px;
+     background: var(--bg-dark);
+     margin: 40px 0;
+}
+
+.margin-b {
+     margin-bottom: 140px;
+}
+
+/* Navigation Menu */
+#navigation-menu {
+     padding-top: 40px;
+     padding-bottom: 40px;
+}
+
+#navigation-menu #btn-hamburger {
+     width: 60px;
+     height: 60px;
+     background-color: var(--bg-dark);
+     border-radius: 50%;
+     position: relative;
+     cursor: pointer;
+}
+
+#navigation-menu #btn-hamburger::after, #navigation-menu #btn-hamburger::before {
+     content: "";
+     width: 30px;
+     height: 2px;
+     background-color: var(--bg-light);
+     display: block;
+     position: absolute;
+     transform: translateX(-50%) rotate(0);
+     transition: top 0.3s linear, transform 0.3s linear;
+}
+
+#navigation-menu #btn-hamburger::after {
+     top: 43%;
+     left: 50%;
+}
+
+#navigation-menu #btn-hamburger::before {
+     top: 57%;
+     left: 50%;
+}
+
+#navigation-menu #btn-hamburger:hover::after {
+     top: 50%;
+     transform: translateX(-50%) rotate(45deg);
+}
+
+#navigation-menu #btn-hamburger:hover::before {
+     top: 50%;
+     transform: translateX(-50%) rotate(-45deg);
+}
+
+/* Introductory content */
+#intro-content {
+     padding-top: 40px;
+     padding-bottom: 40px;
+}
+
+#intro-content .author-description {
+     width: 50%;
+     padding-right: 120px;
+}
+
+#intro-content .author-img {
+     width: 50%;
+}
+
+#intro-content .squares-animated {
+     width: 550px;
+     height: 550px;
+     background-image: url(../img/leandro-do-nascimento.jpg);
+     background-repeat: no-repeat;
+     background-size: contain;
+     position: relative;
+}
+
+#intro-content .squares-animated::after {
+     content: "";
+     width: 100%;
+     height: 100%;
+     border: 2px solid var(--bg-second);
+     display: block;
+     position: absolute;
+     left: -70px;
+     top: -40px;
+     z-index: -1;
+}
+
+#intro-content .squares-animated::before {
+     content: "";
+     width: 100%;
+     height: 100%;
+     background-color: var(--bg-primary);
+     display: block;
+     position: absolute;
+     left: 70px;
+     top: 40px;
+     z-index: -1;
+}
+
+/* Typography */
+#typography {
+     background-color: #892be2de;
+     color: var(--bg-light);
+     height: 400px;
+     position: relative;
+}
+
+/* Refazer e corrigir */
+#typography p {
+     color: #f0f0f0;
+}
+
+#typography a {
+     color: #fff;
+}
+
+#typography a:hover {
+     color: #8ec8ff;
+}
+
+#typography::after {
+     content: "";
+     width: 100%;
+     height: 100%;
+     background-image: url(../img/computer.jpg);
+     display: block;
+     position: absolute;
+     left: 80px;
+     top: 40px;
+     z-index: -1;
+}
