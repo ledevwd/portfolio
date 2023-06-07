@@ -35,11 +35,14 @@
 html {
      font-family: Montserrat-Regular;
      font-size: 16px;
-     overflow-x: hidden;
 }
 
 body {
      font-size: 1.3rem;
+}
+
+#main {
+     overflow-x: hidden;
 }
 
 ::selection {
@@ -53,8 +56,8 @@ body {
 }
 
 .section-padding-y {
-     padding-top: 110px;
-     padding-bottom: 110px;
+     padding-top: 90px;
+     padding-bottom: 90px;
 }
 
 /* Align */
