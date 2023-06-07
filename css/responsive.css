@@ -1,3 +1,11 @@
+@media screen and (max-width: 1900px) {
+     .section-padding-y {
+          padding-top: 80px;
+          padding-bottom: 80px;
+     }
+}
+
+
 @media screen and (max-width: 1800px) {
      .main-header .squares-animated {
           width: 400px;
@@ -16,6 +24,11 @@
      .section-padding-x {
           padding-right: 50px;
           padding-left: 50px;
+     }
+
+     .section-padding-y {
+          padding-top: 50px;
+          padding-bottom: 50px;
      }
 
      .main-header .squares-animated {
@@ -51,6 +64,7 @@
      
      .main-header .author-img {
           width: 100%;
+          margin-bottom: 40px;
      }
 
      .main-header .author-img {
@@ -71,14 +85,11 @@
           right: -50%;
           top: -60%;
      }
-}
 
-@media screen and (max-width: 900px) {
      .list-item {
           display: flex;
           flex-wrap: wrap;
-          padding-right: 0;
-          padding-left: 0;
+          padding: 0;
      }
 
      .list-item-title, .list-item-desc {
