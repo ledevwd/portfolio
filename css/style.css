@@ -32,6 +32,10 @@
 }
 
 /* Default styles */
+html, body {
+     overflow-x: hidden;
+}
+
 html {
      font-family: Montserrat-Regular;
      font-size: 16px;
@@ -39,10 +43,6 @@ html {
 
 body {
      font-size: 1.3rem;
-}
-
-#main {
-     overflow-x: hidden;
 }
 
 ::selection {
