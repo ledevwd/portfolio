@@ -56,8 +56,8 @@ body {
 }
 
 .section-padding-y {
-     padding-top: 90px;
-     padding-bottom: 90px;
+     padding-top: 110px;
+     padding-bottom: 110px;
 }
 
 /* Align */
@@ -284,8 +284,8 @@ q {
 
 /* Menu */
 #navigation-menu {
-     padding-top: 40px;
      position: relative;
+     padding-top: 40px;
 }
 
 #navigation-menu::before {
@@ -353,6 +353,7 @@ q {
 /* Header */
 .main-header {
      position: relative;
+     padding-top: 45px;
 }
 
 .main-header::after, .main-header::before {
@@ -495,6 +496,11 @@ q {
 
 .list-item-desc {
      padding: 20px;
+}
+
+.list-item:last-child .list-item-desc, .list-item:last-child .list-item-desc p {
+     padding-bottom: 0;
+     margin-bottom: 0;
 }
 
 .list-item-title {
