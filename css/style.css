@@ -169,6 +169,11 @@ q {
 
 address {
      font-size: 1rem;
+     border-left: 1px solid var(--bg-primary);
+     padding-left: 40px;
+     position: sticky;
+     left: 0;
+     top: 0;
 }
 
 address span {
@@ -177,7 +182,7 @@ address span {
 }
 
 .social-network {
-     margin-top: 50px;
+     margin-top: 25px;
 }
 
 .social-network-item {
@@ -366,27 +371,28 @@ address span {
      overflow-x: hidden;
 }
 
-/* #navigation-menu::before {
+.hidden-menu-back::before {
      content: "";
      width: 100%;
      height: 100%;
+     background-color: var(--bg-dark);
+     display: inline-block;
+     z-index: 1;
      position: absolute;
-     left: 70px;
+     left: 0;
      top: 0;
-     border-left: 1px solid var(--bg-primary);
-     z-index: -1;
+     animation: an1 0.2s ease-out forwards 0.5s;
 }
 
-#navigation-menu::after {
-     content: "";
-     width: 100%;
-     height: 100%;
-     position: absolute;
-     left: -70px;
-     top: 0;
-     border-right: 1px solid var(--bg-primary);
-     z-index: -1;
-} */
+@keyframes an1 {
+     0% {
+          left: 0;
+     }
+
+     100% {
+          left: 100%;
+     }
+}
 
 .btn-hamburger {
      width: 60px;
