@@ -18,6 +18,14 @@ window.onload = () => {
                hiddenMenu.addEventListener("animationend", () => {
                     html.classList.remove("html-body");
                     body.classList.remove("html-body");
+
+                    navigationMenu.style.overflowY = "hidden";
+               });
+
+               hiddenMenu.addEventListener("animationstart", () => {
+                    navigationMenu.style.overflowY = "scroll";
+
+                    navigationMenu.classList.add("hidden-menu-back");
                });
           }
 
@@ -30,14 +38,16 @@ window.onload = () => {
                hiddenMenu.addEventListener("animationend", () => {
                     html.classList.add("html-body");
                     body.classList.add("html-body");
+
+                    navigationMenu.style.overflowY = "scroll";
                });
 
                hiddenMenu.addEventListener("animationstart", () => {
-                    html.classList.add("html-body");
-                    body.classList.add("html-body");
-
                     navigationMenu.style.height = "100%";
                     navigationMenu.style.alignItems = "flex-start";
+                    navigationMenu.style.overflowY = "hidden";
+
+                    navigationMenu.classList.remove("hidden-menu-back");
                });
           }
      };
