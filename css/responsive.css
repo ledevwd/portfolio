@@ -102,10 +102,18 @@
 
      .hidden-menu-box-left {
           margin-bottom: 20px;
+          padding-bottom: 20px;
      }
 
      .hidden-menu-box-right {
           margin-top: 0;
+     }
+
+     address {
+          top: 0;
+          border-left: none;
+          border-top: 1px solid var(--bg-primary);
+          padding-left: 0;
      }
 }
 
